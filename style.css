@@ -1,0 +1,283 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    color:#ff2d55;
+    margin-bottom:20px;
+    text-shadow:0 0 25px rgba(255,45,85,.6);
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:1.3rem;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+.main-btn{
+    background:#ff2d55;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.main-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,45,85,.5);
+}
+
+/* CONTADOR */
+
+.counter-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.counter-section h2{
+    color:#ff2d55;
+    margin-bottom:30px;
+}
+
+.contador{
+    font-size:2rem;
+    font-weight:bold;
+    line-height:1.8;
+}
+
+/* CARTA */
+
+.letter-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.letter-section h2{
+    margin-bottom:40px;
+    color:#ff2d55;
+}
+
+.envelope{
+    width:340px;
+    height:240px;
+    margin:auto;
+    position:relative;
+    margin-bottom:30px;
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:120px;
+    background:#ff2d55;
+    top:0;
+    left:0;
+    transform-origin:top;
+    transition:1s;
+    z-index:2;
+    border-radius:10px 10px 0 0;
+}
+
+.letter{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:white;
+    color:black;
+    padding:20px;
+    overflow-y:auto;
+    transform:translateY(70px);
+    transition:1s;
+    border-radius:10px;
+}
+
+.letter h3{
+    margin-bottom:15px;
+}
+
+.letter p{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.assinatura{
+    font-weight:bold;
+    color:#ff2d55;
+}
+
+.envelope.open .flap{
+    transform:rotateX(180deg);
+}
+
+.envelope.open .letter{
+    transform:translateY(-80px);
+}
+
+/* MOTIVOS */
+
+.motivos-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.motivos-section h2{
+    margin-bottom:30px;
+    color:#ff2d55;
+}
+
+.motivo-card{
+    max-width:700px;
+    margin:auto;
+    background:#111;
+    border:1px solid rgba(255,45,85,.4);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,45,85,.15);
+}
+
+#motivo{
+    font-size:1.3rem;
+    margin-bottom:25px;
+    min-height:70px;
+}
+
+/* CARROSSEL */
+
+.carousel-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.carousel-section h2{
+    color:#ff2d55;
+    margin-bottom:40px;
+}
+
+.carousel{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.carousel img{
+    width:700px;
+    max-width:90%;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid #ff2d55;
+    box-shadow:0 0 30px rgba(255,45,85,.25);
+}
+
+.nav-btn{
+    background:#ff2d55;
+    color:white;
+    border:none;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:2rem;
+}
+
+/* MUSICA */
+
+.music-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.music-section h2{
+    color:#ff2d55;
+    margin-bottom:30px;
+}
+
+audio{
+    width:350px;
+    max-width:90%;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#999;
+}
+
+/* CORAÇÕES */
+
+.heart{
+    position:fixed;
+    top:-10px;
+    color:#ff2d55;
+    animation:fall linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fall{
+
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .contador{
+        font-size:1.3rem;
+    }
+
+    .carousel{
+        flex-direction:column;
+    }
+
+    .carousel img{
+        height:350px;
+    }
+
+    .envelope{
+        width:300px;
+    }
+
+}
